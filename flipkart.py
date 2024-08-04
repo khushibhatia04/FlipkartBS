@@ -15,7 +15,7 @@ try:
     driver.get("https://www.flipkart.com")
     wait = WebDriverWait(driver, 10)
 
-    # Search  "Samsung Galaxy S10"
+    # Search "Samsung Galaxy S10"
     search_box = wait.until(EC.presence_of_element_located((By.NAME, 'q')))
     search_box.send_keys("Samsung Galaxy S10")
     search_box.send_keys(Keys.RETURN)
@@ -26,7 +26,7 @@ try:
     mobiles_category.click()
     time.sleep(2)  
 
-    # Apply filter by clicking on "SAMSUNG" text
+    # Apply "SAMSUNG" filter
     samsung_filter = wait.until(EC.element_to_be_clickable((By.XPATH, '//div[@class="_6i1qKy" and contains(text(), "SAMSUNG")]')))
     samsung_filter.click()
     time.sleep(2)  
@@ -39,7 +39,7 @@ try:
     # Sort by Price -> High to Low
     sort_by_high_to_low = wait.until(EC.element_to_be_clickable((By.XPATH, '//div[@class="sHCOk2"]//div[text()="Price -- High to Low"]')))
     sort_by_high_to_low.click()
-    time.sleep(8)  
+    time.sleep(5)  
  
     # Read results from page 1
     product_containers = driver.find_elements(By.XPATH, '//div[contains(@class, "_75nlfW")]')
@@ -121,7 +121,7 @@ finally:
 #     driver.get("https://www.flipkart.com")
 #     wait = WebDriverWait(driver, 10)
 
-#     # Search  "Samsung Galaxy S10"
+#     # Search "Samsung Galaxy S10"
 #     search_box = wait.until(EC.presence_of_element_located((By.NAME, 'q')))
 #     search_box.send_keys("Samsung Galaxy S10")
 #     search_box.send_keys(Keys.RETURN)
@@ -132,7 +132,7 @@ finally:
 #     mobiles_category.click()
 #     time.sleep(2)  
 
-#     # Apply filter by clicking on "SAMSUNG" text
+#     # Apply "SAMSUNG" filter
 #     samsung_filter = wait.until(EC.element_to_be_clickable((By.XPATH, '//div[@class="_6i1qKy" and contains(text(), "SAMSUNG")]')))
 #     samsung_filter.click()
 #     time.sleep(2)  
@@ -145,10 +145,7 @@ finally:
 #     # Sort by Price -> High to Low
 #     sort_by_high_to_low = wait.until(EC.element_to_be_clickable((By.XPATH, '//div[@class="sHCOk2"]//div[text()="Price -- High to Low"]')))
 #     sort_by_high_to_low.click()
-#     time.sleep(3)  
-
-#     # Wait for sorting to complete
-#     time.sleep(3)  
+#     time.sleep(5) 
 
 #     # Read results from page 1
 #     product_containers = driver.find_elements(By.XPATH, '//div[contains(@class, "_75nlfW")]')
@@ -178,7 +175,7 @@ finally:
 #         print(f'Product Link: {product_link}')
 #         print('---------------------------------\n')
         
-#         time.sleep(1)  
+#         time.sleep(0.5)  
 
 # finally:
 #     driver.quit()
